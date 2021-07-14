@@ -2,8 +2,7 @@
   "name": "qiniu-path",
   "version": "0.0.1",
   "description": "A Typescript Library for Qiniu Path",
-  "main": "dist/index.js",
-  "types": "dist/index.js.d",
+  "main": "dist/src/index.js",
   "private": false,
   "scripts": {
     "build": "tsc",
