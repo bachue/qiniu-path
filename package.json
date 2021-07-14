@@ -1,0 +1,44 @@
+{
+  "name": "qiniu-path",
+  "version": "0.0.1",
+  "description": "A Typescript Library for Qiniu Path",
+  "main": "dist/index.js",
+  "types": "dist/index.js.d",
+  "private": false,
+  "scripts": {
+    "build": "tsc",
+    "build:check": "tsc --noEmit",
+    "tsc": "tsc",
+    "test": "env TS_NODE_COMPILER_OPTIONS='{\"module\": \"commonjs\"}' mocha --timeout 600000 -b -r ts-node/register -j 1 test/**/*.ts"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bachue/qiniu-path.git"
+  },
+  "keywords": [
+    "Qiniu",
+    "Path"
+  ],
+  "author": "Rong Zhou",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/bachue/qiniu-path/issues"
+  },
+  "homepage": "https://github.com/bachue/qiniu-path#readme",
+  "dependencies": {
+    "@types/node": "^14.14.7",
+    "tslint": "^6.1.3",
+    "typescript": "^4.0.5"
+  },
+  "devDependencies": {
+    "@types/chai": "^4.2.14",
+    "@types/mocha": "^8.0.4",
+    "chai": "^4.2.0",
+    "md5": "^2.3.0",
+    "mocha": "^8.2.1",
+    "ts-node": "^9.0.0"
+  }
+}
