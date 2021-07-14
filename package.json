@@ -1,6 +1,6 @@
 {
   "name": "qiniu-path",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "A Typescript Library for Qiniu Path",
   "main": "dist/src/index.js",
   "private": false,
