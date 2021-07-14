@@ -21,7 +21,7 @@ export class Path {
 		}
 	}
 
-	directory(): string {
+	private directory(): string {
 		if (this.dirSegments.length > 0) {
 			return `${this.root}${this.dirSegments.join(this.sep)}${this.sep}`;
 		} else {
@@ -30,7 +30,11 @@ export class Path {
 	}
 
 	toString(): string {
-		return `${this.directory()}${this.basename()}`;
+		let fullPath = this.directory();
+		if (this.basename()) {
+			fullPath += this.basename();
+		}
+		return fullPath;
 	}
 
 	parentDirectoryPath(): Path {
