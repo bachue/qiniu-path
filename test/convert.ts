@@ -72,6 +72,13 @@ describe('fromQiniuPath', () => {
 		expect(fromQiniuPath('/dir1//dir2/dir3/file').parentDirectoryPath().toString()).to.equal('/dir1//dir2/dir3/');
 		expect(fromQiniuPath('//dir1/dir2/dir3/file').parentDirectoryPath().toString()).to.equal('//dir1/dir2/dir3/');
 	});
+
+	it('should join folder or file', () => {
+		expect(fromQiniuPath('/').joinFile('file').toString()).to.equal('/file');
+		expect(fromQiniuPath('/').joinFile('file/').toString()).to.equal('/file');
+		expect(fromQiniuPath('/').joinFolder('dir').toString()).to.equal('/dir/');
+		expect(fromQiniuPath('/').joinFolder('dir/').toString()).to.equal('/dir/');
+	});
 });
 
 describe('fromLocalPath for UNIX', () => {

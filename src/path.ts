@@ -46,7 +46,21 @@ export class Path {
 		}
 	}
 
-	join(pathStr: string): Path {
+	joinFile(pathStr: string): Path {
+		while (pathStr.endsWith(this.sep)) {
+			pathStr = pathStr.slice(0, pathStr.length - 1);
+		}
+		return this.join(pathStr);
+	}
+
+	joinFolder(pathStr: string): Path {
+		if (!pathStr.endsWith(this.sep)) {
+			pathStr += this.sep;
+		}
+		return this.join(pathStr);
+	}
+
+	private join(pathStr: string): Path {
 		if (this.isDir) {
 			const segments = pathStr.split(this.sep);
 			let isDir = false;
